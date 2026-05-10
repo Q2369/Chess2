@@ -94,7 +94,6 @@ body {
     display: block;
     position: absolute;
     z-index: 100;
-    top: 70px;
     left: 0;
     width: 100%;
     max-width: 100%;
