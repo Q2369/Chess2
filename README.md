@@ -113,7 +113,7 @@
 ### Планшет
 | Горизонтальная ориентация | Вертикальная ориентация |
 |---------------------------|-------------------------|
-| ![Планшет горизонтально](images/screenshots/tabletScreenHorizontal.png) | ![Планшет вертикально](images/screenshots/tabletScreenVertiсal.png) |
+| ![Планшет горизонтально](images/screenshots/tabletScreenHorizontal.png) | ![Планшет вертикально](images/screenshots/tabletScreenVertical.png) |
 
 ### Телефон
 | Горизонтальная ориентация | Вертикальная ориентация |
