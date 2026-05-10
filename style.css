@@ -1,0 +1,475 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: rgb(38, 38, 38);
+    margin: 0;
+    position: relative;
+
+}
+
+#form-of-setting {
+    width: 100vmin;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-of-setting_element {
+    width: calc(33% - (60px / 3 ));
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0;
+    border-radius: 25px;
+    padding: 0;
+    font-size: 16px;
+}
+
+#rules-button {
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border: 0;
+    flex-shrink: 0;
+    padding: 0px;
+    z-index: 101;
+}
+
+#rules-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(205, 205, 205);
+    border-radius: 25px;
+    fill: rgb(88, 88, 88);
+}
+
+#rules-icon.checked {
+    background-color: rgb(146, 146, 146);
+    color: #FFF;
+    fill: #FFF;
+}
+
+.radio-button {
+    background-color: rgb(205, 205, 205);
+    text-align: center;
+    line-height: 50px; 
+}
+
+#radio-ai-button {
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#radio-pvp-button {
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-radio {
+    display: none;
+}
+
+.button-form, .radio-button_checked{
+    background-color: rgb(88, 88, 88);
+    color: #FFF;
+}
+
+#rules-icon:hover, .radio-button:hover, .button-form:hover, .radio-button_checked:hover{
+    background-color: rgb(146, 146, 146);
+    color: #FFF;
+    fill: #FFF;
+}
+
+#rules {
+    display: none;
+}
+
+#rules.visible {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #FFF;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: calc(100vh - 70px);
+}
+
+#rules_header {
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    top: 0;
+}
+
+#rules_list {
+    margin: 0;
+    padding: 0 25px 0 25px;
+    list-style-position: inside;
+}
+
+.rules_list_element {
+    padding: 10px 0 10px 0;
+    margin: 0;
+    line-height: 2;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.rules_list_element:last-child {
+    border-bottom: none;
+}
+
+.rules_image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0 15px 0;
+    object-fit: contain;
+}
+
+#rules_7-8, #rules_14 {
+    max-width: 50%;
+}
+
+#game {
+    position: relative;
+}
+
+#choosing-figure, #result-game{
+    display: none;
+}
+
+#choosing-figure.visible{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34.5vmin;
+    height: 34.5vmin;
+    border-radius: 8.625vmin;
+    background-color: #FFF;
+}
+
+.choosing-figure_box {
+    width: 11.5vmin;
+    height: 11.5vmin;
+    padding: 2.875vmin;
+    flex-shrink: 0;
+    border-radius: 8.625vmin;
+}
+
+.choosing-figure_icon {
+    fill: rgb(38, 38, 38);
+}
+
+.choosing-figure_box:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+.choosing-figure_box:hover .choosing-figure_icon {
+    fill: rgb(88, 88, 88);
+}
+
+#result-game.visible{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 46vmin;
+    height: 23vmin;
+    border-radius: 11.5vmin;
+    background-color: #FFF;
+}
+
+#result-game_text {
+    font-size: 5vmin;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    height: 5vmin;
+    margin-top: calc(11vmin - (5vmin / 2));
+}
+
+#restart-game {
+    width: 23vmin;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -50px;
+    border: 0;
+    font-size: 16px;
+    color: #FFF;
+    background-color: rgb(38, 38, 38);
+}
+
+#restart-game:hover {
+    background-color: rgb(88, 88, 88);
+}
+
+#chessboard {
+    width: 100vmin;
+    height: 100vmin;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    background-color: rgb(88, 88, 88);
+    border-radius: 4%;
+    font-size: 2vmin;
+    border-collapse: collapse
+}
+
+th {
+    padding: 0;
+    color: #FFF;
+    font-weight: 400;
+    border: 0;
+}
+
+tr th:first-child, tr th:last-child {
+    width: 4vmin
+}
+
+tr:first-child th, tr:last-child th {
+    height: 4vmin;
+}
+
+td {
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 1.25vmin;
+    border: 0;
+    flex-shrink: 0;
+    width: 11.5vmin;
+    height: 11.5vmin;
+}
+
+.chess-piece {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: block;
+}
+
+.chess-piece.black {
+    fill: rgb(38, 38, 38);
+}
+
+.chess-piece.white {
+    fill: #FFF;
+}
+
+#chessboard td:hover {
+    background-color: rgb(146, 146, 146);
+}
+
+#chessboard td .cell-checked {
+    background-color: rgb(255, 191, 0);
+}
+
+tr:nth-child(even) td:nth-child(even),
+tr:nth-child(odd) td:nth-child(odd) {
+  background-color: rgb(205, 205, 205);
+}
+
+#form-of-movement {
+    width: 100vmin;
+    display: flex;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#players-turn {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: rgb(88, 88, 88);
+    border-radius: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+#players-turn_icon {
+    fill: #FFF;
+}
+
+#players-turn.black {
+    background-color: rgb(205, 205, 205);
+}
+
+#players-turn.black #players-turn_icon {
+    fill: rgb(38, 38, 38);
+}
+
+.form-of-movement_element {
+    width: calc(100% - 60px - 30px);
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0;
+    border-radius: 25px;
+    padding: 0;
+    font-size: 16px;
+}
+
+.input-form {
+    background-color: rgb(205, 205, 205);
+    text-align: center;
+
+    -webkit-text-security: disc;
+
+    caret-color: rgb(38, 38, 38);
+}
+
+
+#footer_logo {
+    height: 18px;
+    width: 94px;
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    z-index: -1;
+    fill: rgb(205, 205, 205);
+}
+
+#footer_author {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    color: rgb(205, 205, 205);
+    z-index: -1;
+}
+
+@media (min-width: calc(100vmin + 120px)) and (max-width: calc(100vmin + 519px)) {
+
+    main {
+        display: flex;
+    }
+
+    #form-of-setting{
+        width: calc(100% - 100vmin * 0.5);
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 110px;
+    }
+
+    #rules-button {
+        margin-right: 100%;
+    }
+
+    .radio-button {
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+    }
+
+    #rules.visible {
+        top: 0;
+        left: 0;
+        max-height: 100vh;
+    }
+
+    #rules_header {
+        margin-top: 95px;
+    }
+
+    .button-form{
+        width: 100%;
+    }
+
+    #form-of-movement {
+        width: calc(100% - 100vmin * 0.5);
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 230px;
+    }
+
+    #players-turn {
+        margin-left: auto;
+        margin-bottom: 10px;
+        flex-shrink: 0;
+    }
+
+    .input-form {
+        width: calc(100% - 10px);
+        margin-bottom: 10px;
+        flex-shrink: 0;
+        height: 50px;
+    }
+
+    #button-sending-move {
+        height: 50px;
+        width: calc(100% - 10px);
+    }
+
+    #chessboard {
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: calc(100vmin + 520px)) {
+    main {
+        display: flex;
+    }
+
+    #form-of-setting, #form-of-movement {
+        width: calc(100% - 100vmin * 0.5);
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 110px;
+    }
+
+    .radio-button {
+        width: calc(50% - 5px - 30px);
+        margin-bottom: 10px;
+    }
+
+    .button-form{
+        width: 100%;
+    }
+
+    #rules.visible {
+        width: calc((100% - 100vmin) / 2);
+    }
+
+    .input-form {
+        width: calc(50% - 40px);
+        margin-bottom: 10px;
+        flex-shrink: 0;
+        height: 50px;
+    }
+
+    #button-sending-move {
+        height: 50px;
+        width: calc(100% - 10px);
+    }
+
+    #chessboard {
+        flex-shrink: 0;
+    }
+}
